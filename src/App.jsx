@@ -12,7 +12,7 @@ const App = () => {
     if (!query) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://www.omdbapi.com/?apikey=d319cee5&s=${query}`);
+      const res = await axios.get(`https://www.omdbapi.com/?apikey=d319cee5&s=${query}`);
       setMovies(res.data.Search || []);
     } catch (err) {
       console.error(err);
